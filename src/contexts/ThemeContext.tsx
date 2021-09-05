@@ -17,7 +17,6 @@ interface ThemeProvicerProps {
 
 export const ThemeProvider = (props: ThemeProvicerProps) => {
   const [isZoom, setIsZoom] = useState(false)
-  document.title = "zingmp3"
   const contextValue: ThemeProps = {
     isZoom,
     setIsZoom,
