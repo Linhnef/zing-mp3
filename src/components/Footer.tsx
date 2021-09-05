@@ -76,6 +76,9 @@ const SongAvatar = styled(Avatar)`
   &.MuiAvatar-root {
     width: 3em;
     height: 3em;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 `
 
@@ -109,6 +112,10 @@ const Song = styled.div`
       width: 200px;
     }
   }
+  @media only screen and (max-width: 768px) {
+    width: 20vw;
+    margin-left: 5vw;
+  }
 `
 
 const MoreService = styled.div`
@@ -119,6 +126,9 @@ const MoreService = styled.div`
   height: 13vh;
   & svg {
     color: #dadada;
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 `
 

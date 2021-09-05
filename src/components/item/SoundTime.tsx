@@ -84,6 +84,9 @@ const Container = styled.div`
   width: 40vw;
   height: 13vh;
   cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    width: 70vw;
+  }
 `
 
 const Range = styled.input`

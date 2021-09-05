@@ -5,9 +5,7 @@ import { Typography } from "@material-ui/core"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 import SongItem from "../components/item/SongItem"
 import ListContainer from "../components/item/ListContainer"
-import EventItem from "../components/item/EventItem"
 import RankChart from "../components/RankChart"
-import ArtistItem from "../components/item/ArtistItem"
 import JustList from "../components/JustList"
 import { SongContext } from "../contexts/SongContext"
 import { useContext, useEffect } from "react"
@@ -261,8 +259,8 @@ const Container = styled.div`
     width: 95vw;
   }
   @media only screen and (max-width: 768px) {
-    width: 100vw;
-    margin-left: 0;
+    width: 94vw;
+    margin-left: 3vw;
   }
   overflow-x: hidden;
   overflow-y: scroll;
