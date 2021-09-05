@@ -123,6 +123,9 @@ const Container = styled.div`
   @media only screen and (max-width: 1200px) {
     width: 45%;
   }
+  @media only screen and (max-width: 768px) {
+    width: 40%;
+  }
 `
 const ImgaeContainer = styled.div`
   display: flex;

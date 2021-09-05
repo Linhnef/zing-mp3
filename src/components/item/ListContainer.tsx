@@ -21,6 +21,13 @@ const ListContainer = styled.div.attrs((props) => ({ ...props }))`
     background-color: #555;
     display: none;
   }
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 `
 
 export default ListContainer

@@ -91,6 +91,10 @@ const Container = styled.div`
     border-radius: 0.5em;
     background-color: rgba(0, 0, 0, 0.3);
   }
+  @media only screen and (max-width: 768px) {
+    width: 45%;
+    margin: 0.5em 0.5em;
+  }
 `
 
 const Image = styled(CardMedia)`

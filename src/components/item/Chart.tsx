@@ -1,4 +1,4 @@
-import { LineChart, Line } from "recharts"
+import { LineChart, Line, ResponsiveContainer } from "recharts"
 import { ChartType } from "../../services/api/types/Chart"
 import styled from "styled-components"
 
@@ -9,9 +9,11 @@ interface ChartProps {
 function Chart(props: ChartProps) {
   return (
     <Container>
-      <ChartContainer width={600} height={200} data={props.data}>
-        <Line type="monotone" dataKey="uv" stroke="#7c0e61" />
-      </ChartContainer>
+      <ResponsiveContainer>
+        <ChartContainer width={600} height={200} data={props.data}>
+          <Line type="monotone" dataKey="uv" stroke="#7c0e61" />
+        </ChartContainer>
+      </ResponsiveContainer>
     </Container>
   )
 }

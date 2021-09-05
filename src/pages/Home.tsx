@@ -16,6 +16,7 @@ import useAsync from "../hooks/useAsync"
 import Radio from "../components/Radio"
 import EventList from "../components/EventList"
 import ArtistList from "../components/ArtistList"
+import Mixtap from "../components/Mixtap"
 
 const chartImg = "https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.3/static/media/bg-chart.fd766403.jpg"
 
@@ -75,6 +76,7 @@ const Home = () => {
           <Title>
             <Typography>Best Mixtape</Typography>
           </Title>
+          <Mixtap />
         </BestMixtape>
         <NewSong>
           <Title>
@@ -122,12 +124,20 @@ const Home = () => {
 const JustListCotainer = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const Artists = styled.div`
   margin: 2em 0;
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const SongChart = styled.div`
@@ -154,36 +164,64 @@ const SongChart = styled.div`
 const Event = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const Trending = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const NewSong = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const BestMixtape = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const RadiContainer = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const BestMusic = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const Suggestions = styled.div`
   width: 90%;
   margin-left: 5%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const Title = styled.div`
@@ -196,12 +234,20 @@ const Title = styled.div`
     font-size: 1.3em;
     font-weight: 900;
   }
+  @media only screen and (max-width: 768px) {
+    margin-left: 1em;
+  }
 `
 
 const RecentlyContainer = styled.div`
   width: 90%;
   margin-left: 5%;
   margin-top: 20em;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5em;
+  }
 `
 
 const Container = styled.div`
@@ -213,6 +259,10 @@ const Container = styled.div`
   @media only screen and (max-width: 1000px) {
     margin-left: 70px;
     width: 95vw;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
   }
   overflow-x: hidden;
   overflow-y: scroll;

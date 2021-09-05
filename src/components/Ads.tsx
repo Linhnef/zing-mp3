@@ -114,6 +114,9 @@ const Container = styled.div`
     width: 74%;
     margin-left: 13%;
   }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 export default Ads

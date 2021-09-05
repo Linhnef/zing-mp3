@@ -185,12 +185,18 @@ const CreatePlayList = styled.div`
   &:hover {
     cursor: pointer;
   }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const SlideBar = styled.div`
   height: 14em;
   overflow-x: hidden;
   overflow-y: scroll;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -232,6 +238,9 @@ const MainItem = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
+  @media only screen and (max-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 const ItemBackground = styled.div<NavItemProps>`
@@ -240,6 +249,11 @@ const ItemBackground = styled.div<NavItemProps>`
   width: 1%;
   height: 100%;
   background-color: ${(props) => (props.active ? "#743aa0" : "")};
+  @media only screen and (max-width: 768px) {
+    height: 1%;
+    width: 100%;
+    bottom: 0;
+  }
 `
 
 const NavItem = styled.div<NavItemProps>`
@@ -290,6 +304,32 @@ const Container = styled.div`
   height: 88vh;
   @media only screen and (max-width: 1000px) {
     width: 70px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    top: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    z-index: 100;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #f5f5f5;
+      display: none;
+    }
+    &::-webkit-scrollbar {
+      width: 0.3vw;
+      background-color: #f5f5f5;
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #555;
+      display: none;
+    }
   }
 `
 

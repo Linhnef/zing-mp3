@@ -159,6 +159,9 @@ const Container = styled.div<ContainerProps>`
     margin-left: 70px;
     width: 95vw;
   }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 export default Header

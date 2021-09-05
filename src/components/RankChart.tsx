@@ -67,6 +67,9 @@ const Container = styled.div`
     width: 95%;
     flex-direction: column-reverse;
   }
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 const ItemContainer = styled.div`

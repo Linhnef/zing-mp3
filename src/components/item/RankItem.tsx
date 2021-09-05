@@ -83,6 +83,14 @@ const Text = styled(Typography)`
       font-size: 0.8em;
     }
   }
+  @media only screen and (max-width: 768px) {
+    &.MuiTypography-h6 {
+      font-size: 0.8em;
+    }
+    &.MuiTypography-body1 {
+      font-size: 0.6em;
+    }
+  }
 `
 const SongContainer = styled.div`
   display: flex;
@@ -156,5 +164,6 @@ const Container = styled.div`
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
   }
+
 `
 export default RankItem
