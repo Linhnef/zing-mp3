@@ -1,0 +1,13 @@
+export type navType =
+  | "PRIVATE"
+  | "DISCOVER"
+  | "CHART"
+  | "RADIO"
+  | "FOLLOW"
+  | "NEW MUSIC"
+  | "CATEGORY"
+  | "TOP"
+  | "MV"
+  | "SONG"
+  | "PLAYLIST"
+  | "RECENTLY"
