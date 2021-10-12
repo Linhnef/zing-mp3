@@ -1,5 +1,5 @@
 import { ChangeEvent, useRef, useState } from "react"
-import SoundTime from "./item/SoundTime"
+import SoundTime from "../item/SoundTime"
 
 interface SoundTimeControlProps {
   song: any

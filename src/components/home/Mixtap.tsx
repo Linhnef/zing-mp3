@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { useAppApiClient } from "../hooks/useAppApiClient"
-import useAsync from "../hooks/useAsync"
-import { Mixtape } from "../services/api/types/MIxtape"
-import ListContainer from "./item/ListContainer"
-import MixtapeItem from "./item/MisxtapeItem"
+import { useAppApiClient } from "../../hooks/useAppApiClient"
+import useAsync from "../../hooks/useAsync"
+import { Mixtape } from "../../services/api/types/MIxtape"
+import ListContainer from "../item/ListContainer"
+import MixtapeItem from "../item/MisxtapeItem"
 
 function Mixtap() {
   const api = useAppApiClient()

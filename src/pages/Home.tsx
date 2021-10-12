@@ -1,30 +1,33 @@
 import { EmptyLayout } from "../layouts/EmptyLayout"
 import styled from "styled-components"
-import Ads from "../components/Ads"
+import Ads from "../components/home/Ads"
 import { Typography } from "@material-ui/core"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 import SongItem from "../components/item/SongItem"
 import ListContainer from "../components/item/ListContainer"
-import RankChart from "../components/RankChart"
-import JustList from "../components/JustList"
-import { SongContext } from "../contexts/SongContext"
-import { useContext, useEffect } from "react"
+import RankChart from "../components/home/RankChart"
+import JustList from "../components/home/JustList"
+import { useEffect } from "react"
 import { useAppApiClient } from "../hooks/useAppApiClient"
 import useAsync from "../hooks/useAsync"
-import Radio from "../components/Radio"
-import EventList from "../components/EventList"
-import ArtistList from "../components/ArtistList"
-import Mixtap from "../components/Mixtap"
+import Radio from "../components/home/Radio"
+import EventList from "../components/home/EventList"
+import ArtistList from "../components/home/ArtistList"
+import Mixtap from "../components/home/Mixtap"
+import { useDispatch, useSelector } from "react-redux"
+import { songsSelector } from "../app/store"
+import { setSongs } from "../features/song/song"
 
 const chartImg = "https://zjs.zadn.vn/zmp3-desktop/releases/v1.3.3/static/media/bg-chart.fd766403.jpg"
 
 const Home = () => {
   const api = useAppApiClient()
-  const { songs, setSongs } = useContext(SongContext)
+  const songs = useSelector(songsSelector)
+  const dispath = useDispatch()
   const getSongs = useAsync(async () => {
     const response = await api.getSongs()
     if (!response) return
-    setSongs(response)
+    dispath(setSongs(response))
   })
   useEffect(() => {
     getSongs.run()

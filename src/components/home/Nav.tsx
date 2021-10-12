@@ -11,16 +11,18 @@ import StarOutlineIcon from "@material-ui/icons/StarOutline"
 import MusicVideoIcon from "@material-ui/icons/MusicVideo"
 import AlbumIcon from "@material-ui/icons/Album"
 import ReplayIcon from "@material-ui/icons/Replay"
-import Horizon from "../components/item/Horizon"
-import logo from "../image/logo-mp3.svg"
-import { Button, Grid, IconButton, Typography } from "@material-ui/core"
+import Horizon from "../item/Horizon"
+import logo from "../../image/logo-mp3.svg"
+import { Button, IconButton, Typography } from "@material-ui/core"
 import CreateIcon from "@material-ui/icons/Create"
 import AddIcon from "@material-ui/icons/Add"
 import { useState } from "react"
-import { navType } from "../services/api/types/Nav"
+import { navType } from "../../services/api/types/Nav"
+import { useHistory } from "react-router"
 
 function Nav() {
   const [active, setActive] = useState<navType>("DISCOVER")
+  const history = useHistory()
 
   return (
     <Container>
@@ -28,7 +30,13 @@ function Nav() {
         <Logo src={logo} />
       </LogoContainer>
       <MainItem>
-        <NavItem onClick={() => setActive("PRIVATE")} active={active === "PRIVATE"}>
+        <NavItem
+          onClick={() => {
+            setActive("PRIVATE")
+            history.replace("/user")
+          }}
+          active={active === "PRIVATE"}
+        >
           <ItemBackground active={active === "PRIVATE"} />
           <AccountCircleIcon />
           <Title>Private</Title>

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Typography } from "@material-ui/core"
 import SearchIcon from "@material-ui/icons/Search"
 
-interface SearchMenuProps {
+type SearchMenuProps = {
   song: string
   action: () => void
 }

@@ -1,7 +1,7 @@
 import { CardMedia } from "@material-ui/core"
 import styled from "styled-components"
 
-interface AdsItemProps {
+type AdsItemProps = {
   x: number
   responsive: boolean
 }

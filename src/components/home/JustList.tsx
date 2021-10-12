@@ -1,10 +1,10 @@
-import { useContext } from "react"
+import { useSelector } from "react-redux"
 import styled from "styled-components"
-import { SongContext } from "../contexts/SongContext"
-import JustListItem from "./item/JustListItem"
+import { songsSelector } from "../../app/store"
+import JustListItem from "../item/JustListItem"
 
 function JustList() {
-  const { songs } = useContext(SongContext)
+  const songs = useSelector(songsSelector)
   return (
     <Container>
       {songs?.map((item, index) => (

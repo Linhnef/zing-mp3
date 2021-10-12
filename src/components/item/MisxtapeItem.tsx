@@ -8,7 +8,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert"
 import { NavLink } from "react-router-dom"
 import { Mixtape } from "../../services/api/types/MIxtape"
 
-interface MixtapeItemProps {
+type MixtapeItemProps = {
   mixtap: Mixtape
 }
 

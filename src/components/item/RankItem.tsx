@@ -3,7 +3,7 @@ import styled from "styled-components"
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline"
 import { Song } from "../../services/api/types/Song"
 
-interface RankItemProps {
+type RankItemProps = {
   action: () => void
   song: Song
   rank: number
@@ -164,6 +164,5 @@ const Container = styled.div`
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
   }
-
 `
 export default RankItem

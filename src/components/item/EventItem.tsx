@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Event } from "../../services/api/types/Event"
 import { Button, CardMedia, Typography } from "@material-ui/core"
 
-interface EventItemProps {
+type EventItemProps = {
   event: Event
 }
 

@@ -1,13 +1,13 @@
 import { Button, Typography } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import styled from "styled-components"
-import { useAppApiClient } from "../hooks/useAppApiClient"
-import useAsync from "../hooks/useAsync"
-import { Rank } from "../services/api/types/Rank"
-import { second, third, top } from "../services/api/data/data"
-import { ChartType } from "../services/api/types/Chart"
-import Chart from "./item/Chart"
-import RankItem from "./item/RankItem"
+import { useAppApiClient } from "../../hooks/useAppApiClient"
+import useAsync from "../../hooks/useAsync"
+import { Rank } from "../../services/api/types/Rank"
+import { top } from "../../services/api/data/data"
+import { ChartType } from "../../services/api/types/Chart"
+import Chart from "../item/Chart"
+import RankItem from "../item/RankItem"
 
 function RankChart() {
   const api = useAppApiClient()

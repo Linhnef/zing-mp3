@@ -8,7 +8,7 @@ import CallSplitIcon from "@material-ui/icons/CallSplit"
 import CachedIcon from "@material-ui/icons/Cached"
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline"
 
-interface SoundTimeProps {
+type SoundTimeProps = {
   isPlay: boolean
   currentTime: number
   duration: number

@@ -1,16 +1,10 @@
 import { ReactNode } from "react"
 import styled, { createGlobalStyle } from "styled-components"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import Nav from "../components/Nav"
+import Footer from "../components/home/Footer"
+import Header from "../components/home/Header"
+import Nav from "../components/home/Nav"
 import nunitoWoff from "../helpers/fonts/nunito-v16-latin/nunito-v16-latin-regular.woff"
 import nunitoWoff2 from "../helpers/fonts/nunito-v16-latin/nunito-v16-latin-regular.woff2"
-const color = {
-  blurText: "#dadada",
-  text: "#fafafa",
-
-  background: "#231b2e",
-}
 
 interface EmptyLayoutProps {
   children: ReactNode

@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react"
-import { useAppApiClient } from "../hooks/useAppApiClient"
-import useAsync from "../hooks/useAsync"
-import { Artist } from "../services/api/types/Artise"
-import ArtistItem from "./item/ArtistItem"
+import { useEffect, useState } from "react"
+import { useAppApiClient } from "../../hooks/useAppApiClient"
+import useAsync from "../../hooks/useAsync"
+import { Live } from "../../services/api/types/Live"
 import styled from "styled-components"
+import LiveItem from "../item/LiveItem"
 
-function ArtistList() {
+function Radio() {
   const api = useAppApiClient()
-  const [artists, setArtists] = useState<Artist[]>([])
-  const getArtise = useAsync(async () => {
-    const response = await api.getArtist()
+  const [lives, setLives] = useState<Live[]>([])
+  const getLive = useAsync(async () => {
+    const response = await api.getLive()
     if (!response) return
-    setArtists(response)
+    setLives(response)
   })
   useEffect(() => {
-    getArtise.run()
+    getLive.run()
   }, [])
   return (
     <ListContainer>
-      {artists.map((item, index) => (
-        <ArtistItem image={item.image} />
+      {lives.map((item, index) => (
+        <LiveItem key={index} live={item} />
       ))}
     </ListContainer>
   )
@@ -53,4 +53,4 @@ const ListContainer = styled.div`
   }
 `
 
-export default ArtistList
+export default Radio

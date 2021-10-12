@@ -8,9 +8,9 @@ import MicIcon from "@material-ui/icons/Mic"
 import QueueMusicIcon from "@material-ui/icons/QueueMusic"
 import SoundTimeControl from "./SoundTimeControl"
 import { useContext } from "react"
-import { SongContext } from "../contexts/SongContext"
-import { defaultSong } from "../services/api/data/data"
-import { useText } from "../hooks/useText"
+import { SongContext } from "../../contexts/SongContext"
+import { defaultSong } from "../../services/api/data/data"
+import { useText } from "../../hooks/useText"
 
 function Footer() {
   const { currentSong } = useContext(SongContext)

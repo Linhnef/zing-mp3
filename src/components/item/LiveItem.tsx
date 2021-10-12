@@ -3,7 +3,7 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline"
 import { CardMedia, Typography, IconButton, Badge, Avatar } from "@material-ui/core"
 import { Live } from "../../services/api/types/Live"
 
-interface LiveItemProps {
+type LiveItemProps = {
   live: Live
 }
 

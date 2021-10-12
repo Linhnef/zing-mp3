@@ -8,7 +8,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert"
 import { Song } from "../../services/api/types/Song"
 import { SongContext } from "../../contexts/SongContext"
 
-interface SongItemProps {
+type SongItemProps = {
   song: Song
 }
 
@@ -97,8 +97,6 @@ const Image = styled(CardMedia)`
   & svg {
     color: #ffff;
     z-index: 100;
-  }
-  @media only screen and (max-width: 768px) {
   }
 `
 

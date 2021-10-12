@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { useState } from "react"
-import AdsItem from "./item/AdsItem"
+import AdsItem from "../item/AdsItem"
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos"
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos"
 import { IconButton, Typography } from "@material-ui/core"

@@ -8,7 +8,7 @@ import { Song } from "../../services/api/types/Song"
 import { useContext } from "react"
 import { SongContext } from "../../contexts/SongContext"
 
-interface JustListItemProps {
+type JustListItemProps = {
   song: Song
 }
 
